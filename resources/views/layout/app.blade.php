@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/logo.svg" type="">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- <link href="{{ asset('css/input.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('css/drop.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/input.css') }}" rel="stylesheet">
     <title>@yield('title')</title>
 </head>
 
@@ -15,6 +16,9 @@
     <div class="wrapper">
         @yield('content')
     </div>
+
+    <script src="{{ asset('js/drop.js') }}"></script>
+
 </body>
 
 </html>
