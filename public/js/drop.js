@@ -13,6 +13,15 @@ function uploadImage() {
   imgView.textContent = "";
 
 }
+dropArea.addEventListener("dragover", function (e) {
+  e.preventDefault();
+})
+dropArea.addEventListener("drop", function (e) {
+  e.preventDefault();
+  nft.files = e.dataTransfer.files;
+  uploadImage();
+})
+
 
 otherFiles.addEventListener("change", iploadImage);
 
@@ -22,3 +31,14 @@ function iploadImage() {
   otherView.textContent = "";
   otherView.style.borderStyle = none;
 }
+otherArea.addEventListener("dragover", function (e) {
+  e.preventDefault();
+})
+otherArea.addEventListener("drop", function (e) {
+  e.preventDefault();
+  otherFiles.files = e.dataTransfer.files;
+  iploadImage();
+})
+
+
+

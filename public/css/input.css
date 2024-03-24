@@ -8,3 +8,9 @@
 * {
     font-family: "Segoe UI";
 }
+.border-bluend {
+    border-color: #5ea0e1;
+}
+.border-bluend div {
+    background: #5ea0e1;
+}

@@ -15,9 +15,6 @@
     <div class="wrapper">
         @yield('content')
     </div>
-
-    <script src="{{ asset('js/drop.js') }}"></script>
-
 </body>
 
 </html>
