@@ -8,9 +8,20 @@
     </nav>
     <div class="flex items-center gap-[2rem]">
         {{-- <form action="#"> --}}
-        <a href="{{ route('post.create') }}"
-            class="py-[1rem] px-[2.5rem] bg-[#DCF06B] rounded-[2rem] text-[#171717] font-semibold">Create</a>
         {{-- </form> --}}
-        <a href=""><img src="/img/Avatar.svg" alt=""></a>
+        @guest
+            <a href="{{ route('auth.register') }}"><img src="/img/Avatar.svg" alt=""></a>
+        @endguest
+
+        @auth
+            <a href="{{ route('post.create') }}"
+                class="py-[1rem] px-[2.5rem] bg-[#DCF06B] rounded-[2rem] text-[#171717] font-semibold">Create</a>
+
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="btn btn-outline-danger btn-sm" type="submit">Выйти</button>
+            </form>
+
+        @endauth
     </div>
 </header>

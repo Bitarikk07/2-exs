@@ -59,7 +59,7 @@
             <div class="flex  items-center gap-[5rem]">
                 <div class="flex flex-col items-start gap-4">
                     <h2 class="text-[#090909] text-[14px] font-semibold">Preview</h2>
-                    <h2 class="text-[#151517] text-[1.5rem] font-semibold"> Human Leaf #0121</h2>
+                    <h2 class="text-[#151517] text-[1.5rem] font-semibold"> {{ $nft->name }}</h2>
                     <div
                         class=" flex justify-center w-[21rem]  h-[25.5rem]  text-center flex-col rounded-[1.5rem] items-center   bg-[#F9F9F9] ">
                         <div id="img-view" style="background-image: url('/{{ $nft->img }}')"

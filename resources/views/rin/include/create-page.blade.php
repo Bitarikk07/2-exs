@@ -80,10 +80,10 @@
                             <label class="" for="colect-<?php echo $col_id; ?>">
                                 <div id="colectDiv{{ $col->id }}"
                                     class="colectDiv active:border-[#5ea0e1] w-[5.5rem] h-[5.5rem] rounded-2xl border text-center flex justify-center items-center border-[#E9EBED] relative">
-                                    <img class="w-[5.5rem] h-[5.5rem] rounded-2xl" src="{{ $col->img }}"
-                                        alt="">
+                                    <div class="flex w-full h-full rounded-2xl items-center text-center bg-cover bg-no-repeat bg-bottom bg-center flex-col"
+                                        style="background-image: url('/{{ $col->img }}')"></div>
                                     <div
-                                        class="py-[0.12rem] transition-all active:bg-[#5ea0e1] px-[0.38rem] bottom-[10px] bg-[#FFFFFF29] left-[5px] rounded-[0.375rem] backdrop-blur-[15px] absolute">
+                                        class="py-[0.12rem] transition-all px-[0.38rem] bottom-[10px] bg-[#FFFFFF29] left-[5px] rounded-[0.375rem] backdrop-blur-[15px] absolute">
                                         <p class="text-[0.75rem] text-[#FEFEFE]">{{ $col->name }}</p>
                                     </div>
                                 </div>

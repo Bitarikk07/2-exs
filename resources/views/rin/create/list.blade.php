@@ -7,7 +7,6 @@
     <div class="absolute fill-[#0909091F] backdrop-blur-[10px] inset-y-[10rem] flex items-center justify-center w-full h-full"
         role="alert">
         <div class="p-[3rem] bg-white rounded-[1.25rem] flex flex-col gap-12 items-center">
-            {{ session('message') }}
             <div class="flex flex-col items-center gap-[0.62rem]">
                 <h2 class="text-[#090909] text-[2rem] font-bold">Your NFT is Listed!</h2>
                 <h2 class="text-[#8E8E8E] font-normal text-[1rem]">Awesome! You’ve listed<span

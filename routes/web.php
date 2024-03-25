@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\ListingNftController;
@@ -15,16 +16,25 @@ use App\Models\Nft;
 Route::get('/', function () {
   return view('home');
 });
-Route::get('/create', [RowController::class, 'create'])->name('post.create');
-Route::get('/listing/{id}', [RowController::class, 'listing'])->name('create.listing');
 
-Route::get('/list/{id}', [RowController::class, 'list']);
+Route::get('/create', [RowController::class, 'create'])->name('post.create')->middleware('auth');
+Route::get('/listing/{id}', [RowController::class, 'listing'])->name('create.listing')->middleware('auth');
+
+Route::get('/list/{id}', [RowController::class, 'list'])->middleware('auth');
 
 Route::post('/listing/{id}', [ListingNftController::class, 'listing'])->name('nft.listing');
 
 // Route::post('/createi', [);
-Route::get('/createi', [NftController::class, 'store']);
+Route::get('/createi', [NftController::class, 'store'])->middleware('auth');
 Route::post('/createi', [NftController::class, 'store']);
 
-Route::get('/colect', [CollectionController::class, 'show'])->name('create.colect');
+Route::get('/colect', [CollectionController::class, 'show'])->name('create.colect')->middleware('auth');
 Route::post('/colect/create', [CollectionController::class, 'create'])->name('colect.create');
+
+Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
+Route::post('/register', [AuthController::class, 'store'])->name('auth.reg');
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('auth.log');
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
