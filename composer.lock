@@ -1047,6 +1047,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v11.1.1",
             "source": {
                 "type": "git",
@@ -1057,6 +1058,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/1437cea6d2b04cbc83743fbb208e1a01efccd9ec",
                 "reference": "1437cea6d2b04cbc83743fbb208e1a01efccd9ec",
+=======
+            "version": "v11.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "28eabe9dcdcb017a21ce226eda4538c5c8c93b1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/28eabe9dcdcb017a21ce226eda4538c5c8c93b1c",
+                "reference": "28eabe9dcdcb017a21ce226eda4538c5c8c93b1c",
+>>>>>>> origin/r
                 "shasum": ""
             },
             "require": {
@@ -1248,7 +1261,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2024-03-28T15:07:18+00:00"
+=======
+            "time": "2024-03-15T23:17:58+00:00"
+>>>>>>> origin/r
         },
         {
             "name": "laravel/prompts",
@@ -1623,6 +1640,7 @@
         },
         {
             "name": "league/flysystem",
+<<<<<<< HEAD
             "version": "3.26.0",
             "source": {
                 "type": "git",
@@ -1633,6 +1651,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/072735c56cc0da00e10716dd90d5a7f7b40b36be",
                 "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be",
+=======
+            "version": "3.25.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "abbd664eb4381102c559d358420989f835208f18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/abbd664eb4381102c559d358420989f835208f18",
+                "reference": "abbd664eb4381102c559d358420989f835208f18",
+>>>>>>> origin/r
                 "shasum": ""
             },
             "require": {
@@ -1697,7 +1727,11 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/thephpleague/flysystem/tree/3.26.0"
+=======
+                "source": "https://github.com/thephpleague/flysystem/tree/3.25.1"
+>>>>>>> origin/r
             },
             "funding": [
                 {
@@ -1709,7 +1743,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-03-25T11:49:53+00:00"
+=======
+            "time": "2024-03-16T12:53:19+00:00"
+>>>>>>> origin/r
         },
         {
             "name": "league/flysystem-local",
@@ -6001,6 +6039,7 @@
         },
         {
             "name": "mockery/mockery",
+<<<<<<< HEAD
             "version": "1.6.11",
             "source": {
                 "type": "git",
@@ -6011,6 +6050,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mockery/mockery/zipball/81a161d0b135df89951abd52296adf97deb0723d",
                 "reference": "81a161d0b135df89951abd52296adf97deb0723d",
+=======
+            "version": "1.6.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mockery/mockery.git",
+                "reference": "47065d1be1fa05def58dc14c03cf831d3884ef0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/47065d1be1fa05def58dc14c03cf831d3884ef0b",
+                "reference": "47065d1be1fa05def58dc14c03cf831d3884ef0b",
+>>>>>>> origin/r
                 "shasum": ""
             },
             "require": {
@@ -6080,7 +6131,11 @@
                 "security": "https://github.com/mockery/mockery/security/advisories",
                 "source": "https://github.com/mockery/mockery"
             },
+<<<<<<< HEAD
             "time": "2024-03-21T18:34:15+00:00"
+=======
+            "time": "2024-03-19T16:15:45+00:00"
+>>>>>>> origin/r
         },
         {
             "name": "myclabs/deep-copy",

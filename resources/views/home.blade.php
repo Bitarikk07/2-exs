@@ -10,4 +10,3 @@
         @include('include.footer')
     </div>
 @endsection
-<p class="text-red">mjdjkjfnskj</p>

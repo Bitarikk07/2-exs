@@ -1,4 +1,4 @@
-<footer class="py-[5rem] flex items-center justify-between">
+<footer class="py-[5rem] flex items-center justify-between max-w-[80rem] m-auto">
     <div class="flex flex-col gap-[1.5rem] w-[16.25rem]">
         <h2 class="text-[#171717] text-[2rem] font-bold">NFTs Art</h2>
         <h2 class="text-[#171717] text-[1.5rem] font-bold">Create sell, and collect NFT digital art</h2>
