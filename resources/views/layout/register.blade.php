@@ -27,25 +27,40 @@
                     @enderror
                 </div>
                 <div>
-                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                    <input type="password" name="password" id="password" placeholder="••••••••"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 "
-                        required="">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                    <div class="relative">
+                        <input type="password" name="password" id="password" placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
+                            required>
+                        <button type="button" id="togglePassword"
+                            class="absolute inset-y-0 right-0 flex items-center pr-2">
+                            <img src="/img/icon/eye.svg" alt="" id="passwordEyeIcon">
+                        </button>
+                    </div>
                     @error('password')
                         <small class="fs-6 text-danger">{{ $message }}</small>
                     @enderror
                 </div>
+
                 <div>
                     <label for="password_confirmation" class="block mb-2 text-sm font-medium text-gray-900 ">Confirm
                         password</label>
-                    <input type="password" name="password_confirmation" id="password_confirmation"
-                        placeholder="••••••••"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 "
-                        required="">
+                    <div class="relative">
+                        <input type="password" name="password_confirmation" id="password_confirmation"
+                            placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
+                            required>
+                        <button type="button" id="toggleConfirmPassword"
+                            class="absolute inset-y-0 right-0 flex items-center pr-2">
+                            <img src="/img/icon/eye.svg" alt="" id="confirmEyeIcon">
+                        </button>
+                    </div>
+
                     @error('password_confirmation')
                         <small class="fs-6 text-danger">{{ $message }}</small>
                     @enderror
                 </div>
+
                 <button type="submit"
                     class="w-full text-[#171717] hover:text-[#47474765] transition-all bg-[#DCF06B] hover:bg-[#d4e85e] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Create
                     an account</button>

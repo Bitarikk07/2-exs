@@ -35,8 +35,5 @@
             });
         });
     </script> --}}
-    <script src="{{ asset('js/drop.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+
 @endsection

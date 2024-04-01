@@ -1,9 +1,11 @@
-const dropArea = document.getElementById('drop-area');
-const nft = document.getElementById('nft');
-const imgView = document.getElementById('img-view');
+
 const otherArea = document.getElementById('other-area');
 const otherFiles = document.getElementById('other-files');
 const otherView = document.getElementById('other-view');
+
+const dropArea = document.getElementById('drop-area');
+const nft = document.getElementById('nft');
+const imgView = document.getElementById('img-view');
 
 nft.addEventListener("change", uploadImage);
 
@@ -39,6 +41,3 @@ otherArea.addEventListener("drop", function (e) {
   otherFiles.files = e.dataTransfer.files;
   iploadImage();
 })
-
-
-

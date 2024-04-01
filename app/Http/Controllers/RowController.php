@@ -34,4 +34,8 @@ class RowController extends Controller
     {
         return view('rin.create.show');
     }
+    public function our_clans()
+    {
+        return view('rin.clans.our');
+    }
 }

@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Login page')
+@section('title', 'Create New Item')
 
 @section('content')
     <div class=" m-auto">
