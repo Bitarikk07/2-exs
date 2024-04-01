@@ -601,4 +601,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(142 142 142 / var(--tw-text-opacity));
 }
+.text-blue-700{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
 
