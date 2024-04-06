@@ -9,6 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    // Миграция для создания таблицы 'listing_nfts'
     public function up(): void
     {
         Schema::create('listing_nfts', function (Blueprint $table) {
@@ -16,8 +17,10 @@ return new class extends Migration
             $table->string('currency');
             $table->string('price');
             $table->foreignId('nft_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Внешний ключ для пользователя
             $table->string('start');
             $table->string('end');
+            $table->timestamps();
         });
     }
 

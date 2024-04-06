@@ -5,6 +5,8 @@
 @section('content')
     <div class="max-w-[1280px] m-auto">
         @include('include.header')
+
+        @include('include.success')
         <div class="flex py-[3rem]  justify-center items-center">
             <h1 class="text-red-800"></h1>
             <form action="{{ route('colect.create') }}" method="post" class="w-full flex  justify-center"

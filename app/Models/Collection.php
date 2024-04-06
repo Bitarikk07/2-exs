@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Collection extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name',
         'img'
@@ -16,5 +17,10 @@ class Collection extends Model
     public function nfts()
     {
         return $this->hasMany(Nft::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

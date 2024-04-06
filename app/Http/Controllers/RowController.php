@@ -38,4 +38,8 @@ class RowController extends Controller
     {
         return view('rin.clans.our');
     }
+    public function road_map()
+    {
+        return view('rin.clans.roadmap');
+    }
 }

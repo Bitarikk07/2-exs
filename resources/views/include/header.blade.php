@@ -2,7 +2,7 @@
     <a href="/" class="text-[#52B4C1] text-[2rem] font-bold">NFTs Art</a>
     <nav class="flex items-center gap-[3.5rem]">
         <a href="#" class="text-[#171717] font-semibold text-[1rem]">Collection</a>
-        <a href="#" class="text-[#171717] font-semibold text-[1rem]">Road Map</a>
+        <a href="{{ route('road.map') }}" class="text-[#171717] font-semibold text-[1rem]">Road Map</a>
         <a href="{{ route('our.clans') }}" class="text-[#171717] font-semibold text-[1rem]">Our Clans</a>
         <a href="#" class="text-[#171717] font-semibold text-[1rem]">FAQ</a>
     </nav>

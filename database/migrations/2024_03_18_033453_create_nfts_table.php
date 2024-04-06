@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('other');
             $table->string('show');
             $table->foreignId('collection_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Внешний ключ для пользователя
             $table->timestamps();
         });
     }
