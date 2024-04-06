@@ -10,7 +10,6 @@ class ListingNftController extends Controller
 {
     public function listing($id, ListingNft $listing, Nft $nft)
     {
-
         $request = request()->validate([
             'price' => 'required|min:1',
             'currency' => 'required',
@@ -18,13 +17,14 @@ class ListingNftController extends Controller
             'end' => 'required',
         ]);
 
-        $listing = ListingNft::create([
+        $listing = new ListingNft([
             'price' => $request['price'],
             'currency' => $request['currency'],
             'start' => $request['start'],
             'end' => $request['end'],
-            'nft_id' => $id, // Предполагается, что $id содержит айди НФТ
+            'nft_id' => $id, // Предполагается, что $id содержит айди НФ// Устанавливаем user_id текущего пользователя
         ]);
+        $listing->user_id = auth()->user()->id;
         $listing->save();
         return redirect('/list/' . $listing->id)->with('message', 'Holpol');
     }

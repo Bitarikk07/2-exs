@@ -44,6 +44,7 @@ class NftController extends Controller
       $collection = Collection::findOrFail($request['collection_id']);
       $nft->collection()->associate($collection);
     }
+    $nft->user_id = auth()->id();
     $nft->save();
     return redirect()->route('create.listing', $nft->id);
   }

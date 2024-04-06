@@ -17,6 +17,10 @@ class CollectionController extends Controller
             'name' => 'required|min:5|max:10',
             'img' => 'required|image',
         ]);
+
+        $path = '';
+        $fillname = '';
+
         if (request()->has('img')) {
             $file = request()->file('img');
             $exten = $file->getClientOriginalExtension();
@@ -24,11 +28,12 @@ class CollectionController extends Controller
             $path = 'storage/colect/';
             $file->move($path, $fillname);
         }
-        // dd($request);
-        Collection::create([
+
+        $colect = auth()->user()->collections()->create([
             'name' => $request['name'],
             'img' => $path . $fillname,
         ]);
-        return redirect('/colect')->with('message', 'Idea created Successfully');
+
+        return redirect('/colect')->with('message', 'Collection created Successfully');
     }
 }

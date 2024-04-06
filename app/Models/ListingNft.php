@@ -22,4 +22,8 @@ class ListingNft extends Model
     {
         return $this->belongsTo(Nft::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

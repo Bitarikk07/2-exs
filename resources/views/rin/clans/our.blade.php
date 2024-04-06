@@ -124,17 +124,8 @@
             </div>
         </div>
     </div>
-    <div class="flex items-start gap-[5rem] max-w-[80rem] m-auto">
-        <div class="flex flex-col gap-[3rem]  items-start">
-            <div class="flex flex-col gap-4">
-                <h2 class="text-[#090909] text-[3rem] font-bold">Get the Latest
-                    Super Rare Update</h2>
-                <p class="text-[#171717] text-[1rem] ">Sign up to our regular newslater for news right.
-                    new product realease and more</p>
-            </div>
-            <div class=""></div>
-        </div>
-        @include('rin.include.our-clans')
-    </div>
+
+    @include('rin.include.our-clans')
+
     @include('include.footer')
 @endsection

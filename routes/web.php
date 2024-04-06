@@ -40,3 +40,4 @@ Route::post('/login', [AuthController::class, 'authenticate'])->name('auth.log')
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/our-clans', [RowController::class, 'our_clans'])->name('our.clans');
+Route::get('/road-map', [RowController::class, 'road_map'])->name('road.map');

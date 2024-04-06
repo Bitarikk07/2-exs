@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Nft extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name',
         'description',
@@ -15,12 +16,19 @@ class Nft extends Model
         'img',
         'show'
     ];
+
     public function collection()
     {
         return $this->belongsTo(Collection::class);
     }
+
     public function listingnft()
     {
         return $this->hasOne(ListingNft::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

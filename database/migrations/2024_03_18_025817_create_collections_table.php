@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('collections', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Внешний ключ для пользователя
             $table->string('name')->nullable();
             $table->string('img')->nullable();
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
