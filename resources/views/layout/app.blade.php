@@ -16,7 +16,7 @@
 <body>
     <div class="wrapper">
         @yield('content')
-        <p class="text-blue-700">blue</p>
+
     </div>
 </body>
 

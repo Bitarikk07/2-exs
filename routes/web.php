@@ -15,7 +15,7 @@ use App\Models\Nft;
 
 Route::get('/', function () {
   return view('home');
-});
+})->name('home');
 
 Route::get('/create', [RowController::class, 'create'])->name('post.create')->middleware('auth');
 Route::get('/listing/{id}', [RowController::class, 'listing'])->name('create.listing')->middleware('auth');
@@ -38,3 +38,11 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('auth.log');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/two', function () {
+  return view('home');
+})->name('two');
+Route::get('/all', function () {
+  return view('home');
+})->name('all');
+
+Route::get('/grid', [RowController::class, 'grid'])->name('post.create')->middleware('auth');
