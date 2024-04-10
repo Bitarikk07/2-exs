@@ -41,7 +41,8 @@ class RowController extends Controller
         $user = User::find($id);
         // dd($user);
         $nfts = $user->nfts;
-        return view('max.colect.home', compact('user', 'nfts'));
+        $users = User::all();
+        return view('max.colect.home', compact('user', 'nfts', 'users'));
     }
     public function our_clans()
     {
@@ -83,7 +84,8 @@ class RowController extends Controller
     public function profile($id)
     {
         $user = User::find($id);
-        return view('max.colect.home')->with(compact('user'));
+
+        return view('max.colect.home')->with(compact('user', 'users'));
     }
     public function home()
     {

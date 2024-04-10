@@ -14,7 +14,7 @@
                                     <span class="text-[#151517] text-[1rem] font-bold">
                                         Status
                                     </span>
-                                    <img src="img/creator/arrow-down.svg"
+                                    <img src="/img/creator/arrow-down.svg"
                                         class="transition-all duration-500 group-focus:-rotate-180" />
                                 </div>
                                 <div
@@ -105,7 +105,7 @@
                                     <span class="text-[#151517] text-[1rem] font-bold">
                                         Quantity
                                     </span>
-                                    <img src="img/creator/arrow-down.svg"
+                                    <img src="/img/creator/arrow-down.svg"
                                         class="transition-all duration-500 group-focus:-rotate-180" />
                                 </div>
                                 <div
@@ -163,7 +163,7 @@
                                     <span class="text-[#151517] text-[1rem] font-bold">
                                         Currency
                                     </span>
-                                    <img src="img/creator/arrow-down.svg"
+                                    <img src="/img/creator/arrow-down.svg"
                                         class="transition-all duration-500 group-focus:-rotate-180" />
                                 </div>
                                 <div
@@ -217,7 +217,7 @@
                         <form action="" class="flex items-center gap-[0.75rem] w-[57.4%]">
                             <label for="text"
                                 class="flex items-center gap-[0.5rem] w-full bg-[#F9F9F9] py-[0.75rem] pl-[1rem] rounded-[1rem] border border-[#E9EBED] pr-[1rem]">
-                                <button> <img src="img/post/search.svg" alt=""></button>
+                                <button> <img src="/img/post/search.svg" alt=""></button>
 
                                 <input type="text" name="text" id="text"
                                     class="placeholder:text-[#8E8E8E] outline-none bg-transparent"
@@ -257,7 +257,7 @@
                         </div>
                         <div
                             class="flex items-center gap-[0.5rem] bg-[#F9F9F9] border border-[#E9EBED] rounded-[0.75rem] px-[1rem] py-[0.75rem]">
-                            <img src="./assets/img/load.svg" alt="">
+                            <img src="./assets//img/load.svg" alt="">
                             <h2>Loading</h2>
                         </div>
                     </div>
