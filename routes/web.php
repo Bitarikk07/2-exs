@@ -41,3 +41,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/our-clans', [RowController::class, 'our_clans'])->name('our.clans');
 Route::get('/road-map', [RowController::class, 'road_map'])->name('road.map');
+Route::get('/collection', function () {
+  return view('altyn.colect');
+})->name('colection');
+Route::get('/colect-two', function () {
+  return view('altyn.colect-two');
+})->name('colection-two');
