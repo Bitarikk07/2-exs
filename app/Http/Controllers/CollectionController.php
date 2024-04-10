@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class CollectionController extends Controller
 {
-    public function show()
+    public function show($id)
     {
-        return view('rin.create.new-colect');
+        if (Route::is('colect.show')) {
+            $collection = Collection::findOrFail($id);
+
+            $nfts = $collection->nfts;
+
+            return view('rin.create.colects', compact('nfts', 'collection'));
+        } else {
+            return view('rin.create.new-colect');
+        }
     }
     public function create()
     {

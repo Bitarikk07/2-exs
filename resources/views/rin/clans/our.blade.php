@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'home')
+@section('title', 'Our Clans')
 
 @section('content')
     @include('include.header')
@@ -23,103 +23,52 @@
             </div>
             <div class="flex flex-col gap-[1.5rem] items-center">
                 <div class="flex gap-[1.5rem] items-center">
-                    <div class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
-                        <div class="flex flex-col items-center gap-4 ">
-                            <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
-                                    alt="">
+                    @foreach ($randomUser as $user)
+                        <a href="{{ route('users.show', $user->id) }}"
+                            class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
+                            <div class="flex flex-col items-center gap-4 ">
+                                <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
+                                        alt="">
+                                </div>
+                                <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
+                                    <h2>Creators</h2>
+                                </div>
                             </div>
-                            <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
-                                <h2>Creators</h2>
+                            <div class="flex flex-col items-center text-center gap-[0.25rem]">
+                                <h4 class="text-[#151517] font-bold">{{ $user->name }}</h4>
+                                <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
                             </div>
-                        </div>
-                        <div class="flex flex-col items-center text-center gap-[0.25rem]">
-                            <h4 class="text-[#151517] font-bold">Adison Franci</h4>
-                            <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
-                        </div>
-                        <div class="flex items-center gap-[0.75rem]">
-                            <a href="#"><img src="/img/dicord.svg" alt=""></a>
-                            <a href="#"><img src="/img/x.svg" alt=""></a>
-                            <a href="#"><img src="/img/facebook.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
-                        <div class="flex flex-col items-center gap-4 ">
-                            <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
-                                    alt="">
+                            <div class="flex items-center gap-[0.75rem]">
+                                <div href="#"><img src="/img/dicord.svg" alt=""></div>
+                                <div href="#"><img src="/img/x.svg" alt=""></div>
+                                <div href="#"><img src="/img/facebook.svg" alt=""></div>
                             </div>
-                            <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
-                                <h2>Creators</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center text-center gap-[0.25rem]">
-                            <h4 class="text-[#151517] font-bold">Adison Franci</h4>
-                            <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
-                        </div>
-                        <div class="flex items-center gap-[0.75rem]">
-                            <a href="#"><img src="/img/dicord.svg" alt=""></a>
-                            <a href="#"><img src="/img/x.svg" alt=""></a>
-                            <a href="#"><img src="/img/facebook.svg" alt=""></a>
-                        </div>
-                    </div>
+                        </a>
+                    @endforeach
                 </div>
                 <div class="flex gap-[1.5rem] items-center">
-                    <div class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
-                        <div class="flex flex-col items-center gap-4 ">
-                            <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
-                                    alt="">
+                    @foreach ($randomUsers as $user)
+                        <a href="{{ route('users.show', $user->id) }}"
+                            class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
+                            <div class="flex flex-col items-center gap-4 ">
+                                <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
+                                        alt="">
+                                </div>
+                                <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
+                                    <h2>Creators</h2>
+                                </div>
                             </div>
-                            <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
-                                <h2>Creators</h2>
+                            <div class="flex flex-col items-center text-center gap-[0.25rem]">
+                                <h4 class="text-[#151517] font-bold">{{ $user->name }}</h4>
+                                <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
                             </div>
-                        </div>
-                        <div class="flex flex-col items-center text-center gap-[0.25rem]">
-                            <h4 class="text-[#151517] font-bold">Adison Franci</h4>
-                            <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
-                        </div>
-                        <div class="flex items-center gap-[0.75rem]">
-                            <a href="#"><img src="/img/dicord.svg" alt=""></a>
-                            <a href="#"><img src="/img/x.svg" alt=""></a>
-                            <a href="#"><img src="/img/facebook.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
-                        <div class="flex flex-col items-center gap-4 ">
-                            <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
-                                    alt="">
+                            <div class="flex items-center gap-[0.75rem]">
+                                <div href="#"><img src="/img/dicord.svg" alt=""></div>
+                                <div href="#"><img src="/img/x.svg" alt=""></div>
+                                <div href="#"><img src="/img/facebook.svg" alt=""></div>
                             </div>
-                            <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
-                                <h2>Creators</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center text-center gap-[0.25rem]">
-                            <h4 class="text-[#151517] font-bold">Adison Franci</h4>
-                            <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
-                        </div>
-                        <div class="flex items-center gap-[0.75rem]">
-                            <a href="#"><img src="/img/dicord.svg" alt=""></a>
-                            <a href="#"><img src="/img/x.svg" alt=""></a>
-                            <a href="#"><img src="/img/facebook.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col px-[2.31rem] py-4 items-center gap-4">
-                        <div class="flex flex-col items-center gap-4 ">
-                            <div class="w-[12rem] h-[12rem] rounded-[12rem]"> <img src="/img/Avatar.svg" class="w-full"
-                                    alt="">
-                            </div>
-                            <div class="bg-[#52B4C1] text-center rounded-2xl px-[1.5rem] py-[0.5rem] text-[#FEFEFE]">
-                                <h2>Creators</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center text-center gap-[0.25rem]">
-                            <h4 class="text-[#151517] font-bold">Adison Franci</h4>
-                            <p class="text-[#8E8E8E] text-[0.75rem] w-[9.875rem]">CO-Founder of NFTs, Offset & Offeo</p>
-                        </div>
-                        <div class="flex items-center gap-[0.75rem]">
-                            <a href="#"><img src="/img/dicord.svg" alt=""></a>
-                            <a href="#"><img src="/img/x.svg" alt=""></a>
-                            <a href="#"><img src="/img/facebook.svg" alt=""></a>
-                        </div>
-                    </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

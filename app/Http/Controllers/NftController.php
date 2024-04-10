@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Collection;
 use App\Models\Nft;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class NftController extends Controller
 {
-  public function store(Nft $nft)
+  public function store(Nft $nft, User $user, Request $request)
   {
+    if ($request->user()->id == $nft->user_id) {
+      abort(403, 'Unauthorized action.');
+    }
     $request = request()->validate([
       'name' => 'required|min:3|max:40',
-      'description' => 'required|min:3|max:40',
+      'description' => 'required|min:3|max:255',
       'show' => 'required',
       'collection_id' => 'required',
       'img' => 'required|image',
@@ -46,6 +50,7 @@ class NftController extends Controller
     }
     $nft->user_id = auth()->id();
     $nft->save();
+
     return redirect()->route('create.listing', $nft->id);
   }
   // public function store(Nft $nft)

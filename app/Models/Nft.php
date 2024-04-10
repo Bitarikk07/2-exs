@@ -22,7 +22,7 @@ class Nft extends Model
         return $this->belongsTo(Collection::class);
     }
 
-    public function listingnft()
+    public function listing_nft()
     {
         return $this->hasOne(ListingNft::class);
     }

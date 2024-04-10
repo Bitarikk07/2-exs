@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'home')
+@section('title', 'Roadmap')
 
 @section('content')
     @include('include.header')
